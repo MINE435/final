@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Care Project - Appointment Successful</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .success-message {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="success-message">
+        <h1>Appointment Submitted Successfully</h1>
+        <p>Thank you for choosing our Hospital. Your appointment has been successfully submitted.</p>
+        <p>We look forward to providing you with the best care for your heart health.</p>
+        <a href="{% url 'index' %}" class="back-button">Back to Previous Page</a>
+    </div>
+    
+</body>
+</html>

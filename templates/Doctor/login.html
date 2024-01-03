@@ -1,0 +1,20 @@
+
+<style>
+    body{
+      background-image: url(https://img.freepik.com/free-photo/defocused-woman-holding-heart-shape_23-2148635114.jpg);
+      background-size:cover ;
+    }
+  </style>
+    <center><h1>login page</h1><br>
+     <!-- login.html -->
+<form method="post" action="#">
+  {% csrf_token %}
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" required><br>
+  <br>
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required><br>
+  <br>
+</center>
+<center><input type="submit" value="Login"></center>
+</form>

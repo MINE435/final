@@ -1,0 +1,20 @@
+
+<style>
+    body{
+      background-image: url(https://media.istockphoto.com/id/1268398444/vector/heart-care-and-medical-technology-concept-vector-illustration-design.jpg?s=612x612&w=0&k=20&c=1bmjLTbGq54dkA688EQNWK0WDMAtwADsNPA1RPdqtZs=);
+      background-size:cover ;
+    }
+  </style>
+
+
+
+    <center><h1>Registration Page</h1><br><br>
+    
+    <form action="#" method="POST">
+        {% csrf_token %}
+        <input type="text" name='username' placeholder="Enter Username" required><br><br>
+        <input type="text" name='email' placeholder="Enter email" required><br><br>
+        <input type="password" name='password' placeholder="Enter password" required><br><br>
+        <button type="submit">submit</button><br>
+    </form>
+</center>

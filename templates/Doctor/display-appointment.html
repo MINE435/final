@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<style>
+    body{
+      background-image: url(https://wallpaper-house.com/data/out/12/wallpaper2you_490649.jpg);
+      background-size:cover ;
+    }
+  </style>
+<body>
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">S.No</th>
+        <th scope="col">Patient Name</th>
+        <th scope="col">Doctor Name</th>
+        <th scope="col">Registered Date</th>
+        <th scope="col">Registered Time</th>
+        <th scope="col">Email</th>
+        <th scope="col">Symptoms</th>
+          </tr>
+        </thead>
+        {% for i in x %}
+        <tbody>
+          <tr>
+            <th scope="row">{{forloop.counter}}</th>
+            <td>{{ i.patient_name }} </td>
+            <td>{{ i.doctor }}</td>
+            <td>{{ i.date }}</td>
+            <td>{{i.time}}</td>
+            <td>{{ i.Email }}</td>
+            <td>{{ i.Symptoms }}</td>
+          </tr>   
+         {% endfor %}
+      </table>
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+      <br><br>
+      <hr>
+      <a href="{% url 'send_email_and_message' %}"><button class="btn btn-success">Accept the Appointment</button></a>
+      <br><br><br>
+      <a href="/">Homepage</a>
+    
+</body>
+</html>

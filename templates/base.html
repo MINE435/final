@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Heart Care | Heart Hospital</title>
+  {% include 'partials/_css.html' %}
+
+
+</head>
+
+
+<body>
+  <!--Wrapper Start-->
+  <div class="wrapper">
+
+    <!--Header Start-->
+    {% include 'partials/_header.html' %}
+    <!--Header End-->
+    {% include 'partials/_sidebar.html' %}
+
+    <!--Main Slider-->
+    {% include 'partials/_slider.html' with sliders=sliders %}
+    
+    {% block maincontent %}
+
+    {% endblock maincontent %}
+    
+    {% block content %}
+
+    {% endblock content %}
+
+    {% include 'partials/_footer.html' %}
+  
+    {% include 'partials/_js.html' %}
+
+</body>
+
+</html>

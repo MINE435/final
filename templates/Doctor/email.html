@@ -1,0 +1,84 @@
+<!-- templates/email_message_form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Patient - Cardio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #f1a5a5;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #d9534f;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #d9534f;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #c9302c;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="{% url 'send_email_and_message' %}">
+        {% csrf_token %}
+        <h2>Contact Patient - Cardio</h2>
+
+        <!-- Email Input -->
+        <label for="email">Your Email:</label>
+        <input type="email" name="email" required>
+
+        <!-- Message Input -->
+        <label for="message">Your Message:</label>
+        <textarea name="message" rows="4" required></textarea>
+
+        <!-- Submit Button -->
+        <button type="submit">Send Email and Message</button>
+        <br><br><br>
+        <a href="/">Homepage</a>
+    </form>
+  
+</body>
+</html>
+    
